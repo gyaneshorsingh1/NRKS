@@ -1,0 +1,44 @@
+/* CallToAction.css */
+.cta {
+    background: #F78522;
+    color: white;
+    padding: 50px 20px;
+    border-radius: 5px;
+    display: flex;
+    justify-content: space-evenly;
+    gap: 60px;
+  }
+
+  .cta h2{
+    font-size: 32px;
+    font-weight: 600;
+    letter-spacing: 2px;
+  }
+
+  .cta .send-number{
+    display: flex;
+    width: 40%;
+    background: #fff;
+    border: 2px solid #2196F3;
+    border-radius: 10px;
+    overflow: hidden;
+  }
+  .cta .send-number .send-number-input{
+    width: 80%;
+    border: transparent;
+    outline: none;
+    padding: 20px;
+    font-size: 24px;
+  }
+
+  .cta button {
+    background: #2196F3;
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    width: 20%;
+    font-size: 24px;
+  }
+  

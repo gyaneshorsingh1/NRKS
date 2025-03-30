@@ -1,0 +1,769 @@
+:root {
+  --primary-color: #535FFD;
+  --primary-hover: #4048ca;
+  --primary-light: rgba(83, 95, 253, 0.1);
+}
+
+.courses-section {
+  width: 100%;
+  padding: 20px;
+  box-sizing: border-box;
+  background-color: var(--background-color);
+}
+
+/* Container to maintain consistent width */
+.content-wrapper {
+  max-width: 1200px; /* Match this with your courses grid width */
+  margin: 10vh auto;
+  width: 100%;
+}
+
+.courses-header {
+  margin-bottom: 20px;
+  width: 100%;
+}
+
+.header-top {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+  gap: 40px;
+  width: 100%;
+}
+
+.header-left {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  min-width: fit-content;
+}
+
+.header-left h2 {
+  font-size: 1.5rem;
+  white-space: nowrap;
+}
+
+.course-badges {
+  display: flex;
+  gap: 15px;
+}
+
+.badge {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 8px 16px;
+  border-radius: 20px;
+  font-size: 0.9rem;
+  font-weight: 500;
+  white-space: nowrap;
+}
+
+.placement-badge {
+  background-color: var(--primary-light);
+  color: var(--primary-color);
+}
+
+.demand-badge {
+  background-color: #FFF3E0;
+  color: #F57C00;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.demand-badge:hover {
+  background-color: var(--primary-light);
+  color: var(--primary-color);
+}
+
+.demand-badge.active {
+  background-color: var(--primary-color);
+  color: white;
+}
+
+/* Add this if you want to show a different style when focused with keyboard */
+.demand-badge:focus {
+  outline: 2px solid var(--primary-light);
+  outline-offset: 2px;
+}
+
+.header-search-filters {
+  flex: 1;
+  max-width: 600px;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.search-container {
+  position: relative;
+  width: 350px;
+}
+
+.search-input {
+  width: 100%;
+  padding: 12px 40px;
+  border: 2px solid var(--border-color);
+  border-radius: 8px;
+  font-size: 1rem;
+  background-color: var(--background-color);
+  color: var(--text-color);
+  transition: border-color 0.3s ease;
+}
+
+.courses-filters {
+  display: flex;
+  gap: 15px;
+  width: fit-content;
+  margin-left: auto;
+}
+
+.filter-select {
+  width: 150px;
+  padding: 8px 16px;
+  border: 1px solid var(--border-color);
+  border-radius: 8px;
+  background-color: var(--background-color);
+  color: var(--text-color);
+  cursor: pointer;
+  font-size: 0.9rem;
+  transition: border-color 0.3s ease;
+}
+
+.filter-select:hover {
+  border-color: var(--primary-color);
+}
+
+.filter-select:focus {
+  outline: none;
+  border-color: var(--primary-color);
+}
+
+.courses-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 50px;
+  width: 100%;
+}
+
+.course-card {
+  width: 100%;
+  height: 100%;
+  background-color: var(--card-background);
+  border-radius: 12px;
+  overflow: hidden;
+  transition: all 0.3s ease;
+  box-shadow: 0 8px 10px rgba(0, 0, 0, 0.1);
+  border: 1px solid transparent;
+}
+
+.course-card:hover {
+  border-color: var(--primary-color);
+  transform: translateY(-5px);
+}
+
+.course-image {
+  position: relative;
+  width: 100%;
+  height: 200px;
+}
+
+.course-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.course-category {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  padding: 6px 12px;
+  background-color: rgba(0, 0, 0, 0.7);
+  color: white;
+  border-radius: 20px;
+  font-size: 0.8rem;
+}
+
+.course-content {
+  padding: 20px;
+}
+
+.course-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 15px;
+  margin-bottom: 10px;
+}
+
+.course-title {
+  font-size: 1.1rem;
+  color: var(--text-color);
+  margin: 0;
+  flex: 1;
+}
+
+.course-rating {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  padding: 4px 8px;
+  background-color: var(--primary-light);
+  border-radius: 4px;
+  font-weight: 500;
+  white-space: nowrap;
+  color: var(--primary-color);
+}
+
+.star-icon {
+  color: var(--primary-color);
+  font-size: 1.1rem;
+}
+
+.course-instructor {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  color: var(--text-color);
+  opacity: 0.8;
+  font-size: 0.9rem;
+  margin-bottom: 10px;
+}
+
+.course-meta {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 10px 0;
+  font-size: 0.9rem;
+}
+
+.course-students {
+  color: var(--text-color);
+  opacity: 0.8;
+}
+
+.course-details {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-top: 15px;
+  border-top: 1px solid var(--border-color);
+}
+
+.course-duration {
+  color: var(--text-color);
+  opacity: 0.8;
+}
+
+.course-price {
+  font-size: 1.2rem;
+  font-weight: bold;
+  color: #2196F3;
+}
+
+.course-lessons {
+  font-size: 0.9rem;
+  color: var(--text-color);
+  margin: 10px 0;
+}
+
+.course-features {
+  margin: 15px 0;
+}
+
+.feature-item {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 0.9rem;
+  color: var(--text-color);
+  margin-bottom: 8px;
+}
+
+.check-icon {
+  color: var(--primary-color);
+  font-size: 0.9rem;
+}
+
+.start-learning-btn {
+  width: 100%;
+  padding: 12px;
+  background-color: var(--primary-color);
+  color: white;
+  border: none;
+  border-radius: 6px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.start-learning-btn:hover {
+  background-color: var(--primary-hover);
+}
+
+/* Responsive styles */
+@media screen and (max-width: 1024px) {
+  .header-main {
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  .header-badges {
+    flex-wrap: wrap;
+  }
+
+  .header-search-filters {
+    max-width: 100%;
+  }
+
+  .search-container {
+    width: 100%;
+  }
+
+  .courses-filters {
+    width: 100%;
+  }
+
+  .filter-select {
+    width: 50%;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .header-badges {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .courses-filters {
+    flex-direction: column;
+  }
+
+  .filter-select {
+    width: 100%;
+  }
+
+  .courses-grid {
+    grid-template-columns: 1fr;
+  }
+  
+  .courses-section {
+    padding: 20px;
+  }
+}
+
+/* Dark Mode Support */
+.dark-mode .course-card {
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+}
+
+.dark-mode .course-price {
+  color: #64B5F6;
+}
+
+.dark-mode .start-learning-btn {
+  background-color: #1976D2;
+}
+
+.dark-mode .start-learning-btn:hover {
+  background-color: #1565C0;
+}
+
+.dark-mode .course-count {
+  color: #999;
+}
+
+.dark-mode .placement-badge {
+  background-color: rgba(25, 118, 210, 0.1);
+}
+
+.dark-mode .demand-badge {
+  background-color: rgba(245, 124, 0, 0.1);
+}
+
+.dark-mode .course-rating {
+  background-color: rgba(255, 193, 7, 0.1);
+}
+
+/* Add this to your App.css */
+.App {
+  width: 100%;
+  min-height: 100vh;
+}
+
+/* Add this to your index.css or global styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  width: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+.search-filter-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 20px;
+  margin-top: 20px;
+}
+
+.search-icon {
+  position: absolute;
+  left: 12px;
+  top: 50%;
+  transform: translateY(-50%);
+  color: #666;
+  font-size: 1rem;
+}
+
+.clear-search {
+  position: absolute;
+  right: 12px;
+  top: 50%;
+  transform: translateY(-50%);
+  background: none;
+  border: none;
+  color: #666;
+  cursor: pointer;
+  padding: 4px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Optional: Add a no-results message style */
+.no-results {
+  grid-column: 1 / -1;
+  text-align: center;
+  padding: 40px;
+  background-color: var(--card-background);
+  border-radius: 8px;
+}
+
+.no-results h3 {
+  margin-bottom: 10px;
+  color: var(--text-color);
+}
+
+.no-results p {
+  color: var(--text-color);
+  opacity: 0.8;
+  margin-bottom: 20px;
+}
+
+.clear-filters-btn {
+  padding: 10px 20px;
+  background-color: var(--primary-color);
+  color: white;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  font-weight: 500;
+  transition: background-color 0.3s ease;
+}
+
+.clear-filters-btn:hover {
+  background-color: var(--primary-hover);
+}
+
+/* Active filter state */
+.filter-select[value=""] {
+  color: #666;
+}
+
+.filter-select:not([value=""]) {
+  border-color: var(--primary-color);
+  color: var(--primary-color);
+}
+
+@media screen and (max-width: 480px) {
+  .course-header {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 8px;
+  }
+
+  .course-rating {
+    align-self: flex-start;
+  }
+}
+
+/* Rating styles */
+.course-rating {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  padding: 4px 8px;
+  background-color: var(--primary-light);
+  border-radius: 4px;
+  font-weight: 500;
+  white-space: nowrap;
+  color: var(--primary-color);
+}
+
+.star-icon {
+  color: var(--primary-color);
+  font-size: 1.1rem;
+}
+
+/* Badge icons */
+.badge {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.badge svg {
+  font-size: 1rem;
+}
+
+/* Search icons */
+.search-icon {
+  position: absolute;
+  left: 12px;
+  top: 50%;
+  transform: translateY(-50%);
+  color: #666;
+  font-size: 1rem;
+}
+
+.clear-search {
+  position: absolute;
+  right: 12px;
+  top: 50%;
+  transform: translateY(-50%);
+  background: none;
+  border: none;
+  color: #666;
+  cursor: pointer;
+  padding: 4px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Feature check icon */
+.feature-item {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.check-icon {
+  color: var(--primary-color);
+  font-size: 0.9rem;
+}
+
+/* Dark mode adjustments */
+.dark-mode .search-icon,
+.dark-mode .clear-search {
+  color: #999;
+}
+
+.dark-mode .clear-search:hover {
+  color: #fff;
+}
+
+.course-info-list {
+  list-style: disc;
+  padding-left: 20px;
+  margin: 12px 0;
+}
+
+.course-info-list li {
+  color: var(--text-color);
+  opacity: 0.8;
+  font-size: 0.9rem;
+  margin-bottom: 8px;
+  line-height: 1.4;
+}
+
+/* Dark mode support */
+.dark-mode .course-info-list li {
+  color: var(--text-color);
+  opacity: 0.7;
+}
+
+/* Search input */
+.search-input:focus {
+  outline: none;
+  border-color: var(--primary-color);
+}
+
+/* Filter selects */
+.filter-select:hover,
+.filter-select:focus {
+  border-color: var(--primary-color);
+}
+
+.filter-select:not([value=""]) {
+  border-color: var(--primary-color);
+  color: var(--primary-color);
+}
+
+/* Start Learning button */
+.start-learning-btn {
+  width: 100%;
+  padding: 12px;
+  background-color: var(--primary-color);
+  color: white;
+  border: none;
+  border-radius: 6px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.start-learning-btn:hover {
+  background-color: var(--primary-hover);
+}
+
+/* High Demand badge */
+.demand-badge.active {
+  background-color: var(--primary-color);
+  color: white;
+}
+
+.demand-badge:hover {
+  background-color: var(--primary-light);
+  color: var(--primary-color);
+}
+
+/* Clear filters button */
+.clear-filters-btn {
+  padding: 10px 20px;
+  background-color: var(--primary-color);
+  color: white;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  font-weight: 500;
+  transition: background-color 0.3s ease;
+}
+
+.clear-filters-btn:hover {
+  background-color: var(--primary-hover);
+}
+
+/* Course card hover effect */
+.course-card {
+  border: 1px solid transparent;
+  transition: all 0.3s ease;
+}
+
+.course-card:hover {
+  border-color: var(--primary-color);
+  transform: translateY(-5px);
+}
+
+/* Rating badge */
+.course-rating {
+  background-color: var(--primary-light);
+  color: var(--primary-color);
+}
+
+.star-icon {
+  color: var(--primary-color);
+}
+
+/* Feature check icons */
+.check-icon {
+  color: var(--primary-color);
+}
+
+/* Placement badge */
+.placement-badge {
+  background-color: var(--primary-light);
+  color: var(--primary-color);
+}
+
+/* Focus states */
+.search-input:focus,
+.filter-select:focus,
+.start-learning-btn:focus,
+.demand-badge:focus {
+  outline: 2px solid var(--primary-light);
+  outline-offset: 2px;
+}
+
+/* Dark mode adjustments */
+.dark-mode .course-rating,
+.dark-mode .placement-badge,
+.dark-mode .demand-badge:hover {
+  background-color: rgba(83, 95, 253, 0.15);
+}
+
+.dark-mode .start-learning-btn:hover,
+.dark-mode .clear-filters-btn:hover {
+  background-color: var(--primary-hover);
+}
+
+.card-footer {
+  margin-top: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 15px;
+}
+
+.course-price {
+  display: flex;
+  align-items: center;
+}
+
+.price-amount {
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: var(--primary-color);
+}
+
+.price-text {
+  color: var(--text-color);
+  opacity: 0.7;
+  font-size: 0.9rem;
+}
+
+.start-learning-btn {
+  padding: 10px 20px;
+  background-color: var(--primary-color);
+  color: white;
+  border: none;
+  border-radius: 6px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  white-space: nowrap;
+}
+
+.start-learning-btn:hover {
+  background-color: var(--primary-hover);
+}
+
+/* Dark mode support */
+.dark-mode .price-text {
+  opacity: 0.6;
+}
+
+/* Responsive adjustments */
+@media screen and (max-width: 480px) {
+  .card-footer {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .course-price {
+    justify-content: center;
+  }
+
+  .start-learning-btn {
+    width: 100%;
+  }
+}

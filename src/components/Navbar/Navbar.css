@@ -32,6 +32,10 @@
     align-items: center;
     font-family: "Poppins", sans-serif;
   }
+  .nav-links li a{
+    text-decoration: none;
+    color: var(--text-color);
+  }
   .nav-links li {
     cursor: pointer;
     font-weight: bold;

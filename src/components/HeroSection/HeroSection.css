@@ -51,7 +51,7 @@
   
   .btn-outline {
     border: 1px solid #2563eb;
-    color: #2563eb;
+    color: black;
     font-weight: 600;
     padding: 0.5rem 1.5rem;
     border-radius: 10px;
@@ -61,6 +61,7 @@
   
   .btn-outline:hover {
     background-color: #2563eb; /* light blue-50 */
+    color: #fff;
   }
   
 .hero-home-container{

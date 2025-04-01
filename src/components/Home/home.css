@@ -1,0 +1,19 @@
+.courselist-section{
+    width: 100%;
+    padding: 20px;
+}
+
+
+.courselist-container{
+    padding: 20px;
+}
+.courselist-container h2{
+    font-size: 40px;
+}
+.courselist-container p{
+    font-size: 24px;
+}
+
+.coursegrid{
+    padding: 60px 30px;
+}

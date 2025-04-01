@@ -1,8 +1,8 @@
 import React from 'react'
 import { AiFillStar } from 'react-icons/ai'
 import { FaCheck } from 'react-icons/fa'
-import "./CourseCard.css"
-const CourseCard = ({ course }) => {
+
+const PureCourseCard = ({ course }) => {
   return (
     <div className="course-card">
       <div className="course-image">
@@ -30,9 +30,6 @@ const CourseCard = ({ course }) => {
           ))}
         </div>
         <div className="card-footer">
-          <div className="course-price">
-            <span className="price-amount">${course.price}</span>
-          </div>
           <button className="start-learning-btn">{course.buttonText}</button>
         </div>
       </div>
@@ -40,4 +37,4 @@ const CourseCard = ({ course }) => {
   )
 }
 
-export default CourseCard
+export default PureCourseCard

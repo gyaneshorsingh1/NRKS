@@ -154,7 +154,7 @@
   border-radius: 12px;
   overflow: hidden;
   transition: all 0.3s ease;
-  box-shadow: 0 8px 10px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.234);
   border: 1px solid transparent;
 }
 
@@ -291,7 +291,7 @@
 .start-learning-btn {
   width: 100%;
   padding: 12px;
-  background-color: var(--primary-color);
+  background: var(--primary-color);
   color: white;
   border: none;
   border-radius: 6px;
@@ -459,20 +459,7 @@ body {
   margin-bottom: 20px;
 }
 
-.clear-filters-btn {
-  padding: 10px 20px;
-  background-color: var(--primary-color);
-  color: white;
-  border: none;
-  border-radius: 6px;
-  cursor: pointer;
-  font-weight: 500;
-  transition: background-color 0.3s ease;
-}
 
-.clear-filters-btn:hover {
-  background-color: var(--primary-hover);
-}
 
 /* Active filter state */
 .filter-select[value=""] {
@@ -609,22 +596,7 @@ body {
   color: var(--primary-color);
 }
 
-/* Start Learning button */
-.start-learning-btn {
-  width: 100%;
-  padding: 12px;
-  background-color: var(--primary-color);
-  color: white;
-  border: none;
-  border-radius: 6px;
-  font-weight: 500;
-  cursor: pointer;
-  transition: background-color 0.3s ease;
-}
 
-.start-learning-btn:hover {
-  background-color: var(--primary-hover);
-}
 
 /* High Demand badge */
 .demand-badge.active {
@@ -731,21 +703,7 @@ body {
   font-size: 0.9rem;
 }
 
-.start-learning-btn {
-  padding: 10px 20px;
-  background-color: var(--primary-color);
-  color: white;
-  border: none;
-  border-radius: 6px;
-  font-weight: 500;
-  cursor: pointer;
-  transition: background-color 0.3s ease;
-  white-space: nowrap;
-}
 
-.start-learning-btn:hover {
-  background-color: var(--primary-hover);
-}
 
 /* Dark mode support */
 .dark-mode .price-text {

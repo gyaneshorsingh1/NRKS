@@ -8,7 +8,7 @@
 
 /* Theme variables */
 :root {
-  --background-color: #ffffff;
+  --background-color: transparent;
   --text-color: #333333;
   --card-background: #ffffff;
   --border-color: #e0e0e0;
@@ -54,16 +54,16 @@ button {
   font-size: 1em;
   font-weight: 500;
   font-family: inherit;
-  background-color: #1a1a1a;
   cursor: pointer;
   transition: border-color 0.25s;
+  outline: transparent;
 }
 button:hover {
   border-color: #646cff;
 }
 button:focus,
 button:focus-visible {
-  outline: 4px auto -webkit-focus-ring-color;
+  outline: 4px auto #646cff;
 }
 
 @media (prefers-color-scheme: light) {
